@@ -1,4 +1,4 @@
-### Hi there 👋
+### Hi there 😀
 
 <!--
 **12kpro/12kpro** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
