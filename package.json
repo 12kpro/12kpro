@@ -1,5 +1,6 @@
 {
   "name": "12kpro",
+  "homepage": "https://www.12kpro.net",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
