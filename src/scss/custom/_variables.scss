@@ -1,0 +1,26 @@
+// bootstrap variables override
+//$dark: #141414;
+$primary: #004182;
+$linkedin-bg: #f3f2ef;
+$btn-hover-bg-shade-amount: 5%;
+$btn-hover-bg-tint-amount: 15%;
+$border-radius: 0.5rem;
+//my css variables
+//$scrollbar-color: #e5091480;
+//$scrollbar-bg: #00000000;
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px
+);
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);

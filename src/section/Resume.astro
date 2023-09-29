@@ -1,0 +1,53 @@
+---
+import { getCollection } from 'astro:content';
+import ResumeItem from '../components/ResumeItem.astro';
+import SocialLink from "../components/SocialLink.astro"
+const experiences = (await getCollection('experience'))?.sort(
+	(a, b) => a.data.order - b.data.order
+);
+const education = (await getCollection('education'))?.sort(
+	(a, b) => a.data.order - b.data.order
+);
+---
+  <!-- ======= Resume Section ======= -->
+  <section id="resume" class="resume">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Resume</h2>
+        <p>Check My Resume <a href="/Mauro_Simoni_CV.pdf" class="ps-3" download> <i class=" heartbeat bi bi-download"></i> </a></p>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6">
+          <h3 class="resume-title">Professional Experience</h3>
+          {
+            experiences?.map(async (e) => {
+              const { Content } = await e.render()
+              return (
+                <ResumeItem {...e.data}>
+                  <Content />
+                </ResumeItem>
+              )
+            })
+          }
+          
+        </div>
+        <div class="col-lg-6">
+          <h3 class="resume-title">Education</h3>
+          {
+            education?.map(async (e) => {
+              const { Content } = await e.render()
+              return (
+                <ResumeItem {...e.data}>
+                  <Content />
+                </ResumeItem>
+              )
+            })
+          }
+        </div>
+      </div>
+      <SocialLink />
+    </div>
+  </section>
+<!-- End Resume Section -->

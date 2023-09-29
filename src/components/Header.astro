@@ -1,0 +1,37 @@
+---
+import HeaderLink from './HeaderLink.astro';
+import SocialLink from "../components/SocialLink.astro"
+import { SITE_TITLE, OPEN } from '../consts';
+const { title } = Astro.props;
+
+---
+
+<header id="header">
+    <div class="container">
+
+      <h1 class="text-capitalize">
+        <a href="index.html">{title} </a>
+      </h1>
+      {
+        OPEN &&  <div id="open">
+                    <p><span class="badge bg-danger">#opentowork</span>  Open to new opportunities</p>
+                 </div>
+      }
+
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> -->
+      <h2>I'm a passionate <span class="text-capitalize">full stack web developer</span> from Treviso</h2>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><HeaderLink class="nav-link active" href="#header">Home</HeaderLink></li>
+          <li><HeaderLink class="nav-link" href="#about">About</HeaderLink></li>
+          <li><HeaderLink class="nav-link" href="#resume">Resume</HeaderLink></li>
+          <li><HeaderLink class="nav-link" href="#portfolio">Portfolio</HeaderLink></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+      <SocialLink />
+    </div>
+  </header>
+  <!-- End Header -->

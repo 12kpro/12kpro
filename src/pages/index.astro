@@ -1,0 +1,31 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import About from '../section/About.astro';
+import Resume from '../section/Resume.astro';
+import Portfolio from '../section/Portfolio.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION, MAINTENANCE } from '../consts';
+import Maintenance from '../components/Maintenance.astro';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		{MAINTENANCE 
+			? 	
+				<Maintenance /> 
+				<Footer title={SITE_TITLE}/>
+			: 
+				<Header title={SITE_TITLE}/>
+				<About />
+				<Resume />
+				<Portfolio />
+				<Footer title={SITE_TITLE}/>
+				<script is:inline src="/main.js"></script>
+		}
+	</body>
+</html>

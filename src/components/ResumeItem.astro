@@ -1,0 +1,9 @@
+---
+const { title, description, start, end } = Astro.props;
+---
+<div class="resume-item">
+    <h4 class="text-uppercase">{description}</h4>
+    <h5>{start} - {end}</h5>
+    <p><em class="text-capitalize">{title}</em></p>
+    <slot />
+</div>

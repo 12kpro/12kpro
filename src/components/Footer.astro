@@ -1,0 +1,13 @@
+---
+const today = new Date();
+const { title } = Astro.props;
+import ContactNav from '../components/ContactNav.astro';
+---
+
+<footer class="credits">
+
+	&copy; {today.getFullYear()} &nbsp; {title}. All rights reserved. 
+
+	
+		<!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
+</footer>

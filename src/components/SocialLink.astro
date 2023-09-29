@@ -1,0 +1,22 @@
+---
+import { EMAIL } from "../consts"
+---
+
+<social-link class="social-links" data-email={EMAIL}>
+    <a href="https://github.com/12kpro"><i class="bi bi-github"></i></a>
+    <a href="https://www.linkedin.com/in/maurosimoni79/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+    <a href=""  class="mailme"><i class="bi bi-envelope-fill"></i></a>
+</social-link>
+
+<script>
+    class SocialLink extends HTMLElement {
+      constructor() {
+        super();
+        const email = this.dataset.email;
+        const mailLink = this.querySelector('.mailme');
+        mailLink?.setAttribute("href", `mailto:${atob(email)}`);
+      }
+    }
+  
+    customElements.define('social-link', SocialLink);
+  </script>

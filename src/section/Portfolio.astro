@@ -1,0 +1,41 @@
+---
+import { getCollection } from 'astro:content';
+import SocialLink from "../components/SocialLink.astro"
+
+import { Image } from 'astro:assets';
+
+const posts = (await getCollection('blog')).sort(
+	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+);
+---
+
+  <!-- ======= Portfolio Section ======= -->
+  <section id="portfolio" class="portfolio">
+    <div class="container">
+      <div class="section-title">
+        <h2>Portfolio</h2>
+        <p>My Works</p>
+      </div>
+      <div class="row portfolio-container">
+
+        {
+            posts.map((post) => (
+              <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                <div class="portfolio-wrap">
+                  <img src={post.data.heroImage} class="img-fluid" alt={post.data.title} width="800" height="600"/>
+                  <div class="portfolio-info">
+                    <h4 class="text-capitalize">{post.data.title}</h4>
+                    <div class="portfolio-links">
+                      <a href={post.data.ghlink} class="" title="Project Details">
+                        <i class="bx bi bi-github"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))
+        }
+      </div>
+      <SocialLink />
+    </div>
+  </section><!-- End Portfolio Section -->

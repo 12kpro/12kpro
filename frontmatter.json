@@ -1,0 +1,185 @@
+{
+  "$schema": "https://frontmatter.codes/frontmatter.schema.json",
+  "frontMatter.framework.id": "astro",
+  "frontMatter.preview.host": "http://localhost:4321",
+  "frontMatter.content.publicFolder": "public",
+  "frontMatter.content.pageFolders": [
+    {
+      "title": "blog",
+      "path": "[[workspace]]/src/content/blog"
+    },
+    {
+      "title": "education",
+      "path": "[[workspace]]/src/content/education"
+    },
+    {
+      "title": "experience",
+      "path": "[[workspace]]/src/content/experience"
+    },
+    {
+      "title": "about",
+      "path": "[[workspace]]/src/content/about"
+    }
+  ],
+  "frontMatter.taxonomy.contentTypes": [
+    {
+      "name": "default",
+      "pageBundle": false,
+      "previewPath": "'blog'",
+      "filePrefix": null,
+      "clearEmpty": true,
+      "fields": [
+        {
+          "title": "Title",
+          "name": "title",
+          "type": "string",
+          "single": true
+        },
+        {
+          "title": "Publishing date",
+          "name": "pubDate",
+          "type": "datetime",
+          "default": "{{now}}",
+          "isPublishDate": true
+        },
+        {
+          "title": "Content preview",
+          "name": "heroImage",
+          "type": "image",
+          "isPreviewImage": true
+        },
+        {
+          "title": "Git hub link",
+          "name": "ghlink",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "education",
+      "pageBundle": false,
+      "previewPath": "'education'",
+      "filePrefix": null,
+      "clearEmpty": true,
+      "fields": [
+        {
+          "title": "Title",
+          "name": "title",
+          "type": "string",
+          "single": true
+        },
+        {
+          "title": "Description",
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "title": "Order",
+          "name": "order",
+          "type": "number",
+          "step": 1
+        },
+        {
+          "title": "Publishing date",
+          "name": "pubDate",
+          "type": "datetime",
+          "default": "{{now}}",
+          "isPublishDate": true
+        },
+        {
+          "title": "Start",
+          "name": "start",
+          "type": "string"
+        },
+        {
+          "title": "End",
+          "name": "end",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "experience",
+      "pageBundle": false,
+      "previewPath": "'experience'",
+      "filePrefix": null,
+      "clearEmpty": true,
+      "fields": [
+        {
+          "title": "Title",
+          "name": "title",
+          "type": "string",
+          "single": true
+        },
+        {
+          "title": "Description",
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "title": "Order",
+          "name": "order",
+          "type": "number",
+          "step": 1
+        },
+        {
+          "title": "Publishing date",
+          "name": "pubDate",
+          "type": "datetime",
+          "default": "{{now}}",
+          "isPublishDate": true
+        },
+        {
+          "title": "Start",
+          "name": "start",
+          "type": "string"
+        },
+        {
+          "title": "End",
+          "name": "end",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "about",
+      "pageBundle": false,
+      "previewPath": "'about'",
+      "filePrefix": null,
+      "clearEmpty": true,
+      "fields": [
+        {
+          "title": "Title",
+          "name": "title",
+          "type": "string",
+          "single": true
+        },
+        {
+          "title": "Content preview",
+          "name": "image",
+          "type": "image",
+          "isPreviewImage": true
+        },
+        {
+          "title": "Published",
+          "name": "isPublished",
+          "type": "boolean"
+        },
+        {
+          "title": "skills",
+          "name": "skills",
+          "type": "image",
+          "isPreviewImage": true,
+          "multiple": true
+        },
+        {
+          "title": "Publishing date",
+          "name": "pubDate",
+          "type": "datetime",
+          "default": "{{now}}",
+          "isPublishDate": true
+        }
+      ]
+    }
+  ]
+}
