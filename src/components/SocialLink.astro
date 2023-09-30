@@ -3,9 +3,28 @@ import { EMAIL } from "../consts"
 ---
 
 <social-link class="social-links" data-email={EMAIL}>
-    <a href="https://github.com/12kpro"><i class="bi bi-github"></i></a>
-    <a href="https://www.linkedin.com/in/maurosimoni79/" class="linkedin"><i class="bi bi-linkedin"></i></a>
-    <a href=""  class="mailme"><i class="bi bi-envelope-fill"></i></a>
+    <a 
+      href="https://github.com/12kpro"
+      title="Contact me on Github"
+      aria-label="Contact me on Github"
+      >
+      <i class="bi bi-github"></i>
+    </a>
+    <a 
+      href="https://www.linkedin.com/in/maurosimoni79/"
+      title="Contact me on Linkedin"
+      aria-label="Contact me on Linkedin"
+      >
+        <i class="bi bi-linkedin"></i>
+    </a>
+    <a 
+      href=""
+      class="mailme"
+      title="Send me an email"
+      aria-label="Send me an email"
+      >
+        <i class="bi bi-envelope-fill"></i>
+    </a>
 </social-link>
 
 <script>

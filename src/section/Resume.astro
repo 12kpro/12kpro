@@ -15,7 +15,17 @@ const education = (await getCollection('education'))?.sort(
 
       <div class="section-title">
         <h2>Resume</h2>
-        <p>Check My Resume <a href="/Mauro_Simoni_CV.pdf" class="ps-3" download> <i class=" heartbeat bi bi-download"></i> </a></p>
+        <p>Check My Resume 
+          <a 
+            href="/Mauro_Simoni_CV.pdf"
+            class="ps-3"
+            title="Download CV"
+            aria-label="Download CV"
+            download
+          > 
+            <i class=" heartbeat bi bi-download"></i>
+         </a>
+        </p>
       </div>
 
       <div class="row">

@@ -1,4 +1,4 @@
-$color_1: #dde5ef; //#f4f9ff;
+$color_1: #d3e2f5; //#f4f9ff;
 $color_2: #00aaff; //#18d26e;
 $color_3: #35e888;
 $color_4: rgba(255, 255, 255, 0.8);
@@ -34,7 +34,7 @@ body {
   &::before {
     content: "";
     position: fixed;
-    background: #040404 url("../img/bg.webp") top right no-repeat;
+    background: #040404 var(--bg-image) top right no-repeat;
     background-size: cover;
     left: 0;
     right: 0;
@@ -127,7 +127,7 @@ h6 {
   h2 {
     font-size: 24px;
     margin-top: 20px;
-    color: $color_4;
+    color: $color_1;
     span {
       color: $color_1;
       border-bottom: 2px solid $color_2;

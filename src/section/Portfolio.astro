@@ -22,11 +22,11 @@ const posts = (await getCollection('blog')).sort(
             posts.map((post) => (
               <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                 <div class="portfolio-wrap">
-                  <img src={post.data.heroImage} class="img-fluid" alt={post.data.title} width="800" height="600"/>
+                  <Image src={post.data.heroImage} class="img-fluid" alt={post.data.title} width="800" height="600" format='webp' quality={"mid"}/>
                   <div class="portfolio-info">
-                    <h4 class="text-capitalize">{post.data.title}</h4>
+                    <h3 class="text-capitalize">{post.data.title}</h3>
                     <div class="portfolio-links">
-                      <a href={post.data.ghlink} class="" title="Project Details">
+                      <a href={post.data.ghlink} title="Project Details" target="_blank">
                         <i class="bx bi bi-github"></i>
                       </a>
                     </div>
