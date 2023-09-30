@@ -3,6 +3,6 @@
 
 export const SITE_TITLE = "Mauro Simoni";
 export const SITE_DESCRIPTION = "Welcome to my website!";
-export const EMAIL = "aW5mb0AxMmtwcm8ubmV0";
+export const EMAIL = btoa("info@maurosimoni.me");
 export const OPEN = true;
 export const MAINTENANCE = false;

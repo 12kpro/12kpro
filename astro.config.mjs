@@ -6,7 +6,7 @@ import compress from "astro-compress";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://12kpro.net",
+  site: "https://maurosimoni.me",
   integrations: [mdx(), sitemap(), compress()],
   vite: {
     css: {
